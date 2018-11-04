@@ -5,15 +5,25 @@
 #include <vector> 
 #include "card.h"
 #include "deck.h"
+#include "player.h"
 using namespace std;
 
 int main(){
+    Player p("Sergio");
+    cout << "Player is called - " << p.getName() << endl;
     int i = 0;
     Deck d;
     cout << d.size() << endl;
-    for(i = 0; i < 52; i++){
-	
+    for(i = 0; i < 10; i++){
+	Card cd = d.dealCard();
+	cout << cd << endl;
     }
+    d.shuffle();
+    for(i = 0; i < 10; i++){
+	Card cd = d.dealCard();
+	cout << cd << endl;
+    }  
+    cout << d.size() << endl;  
  
 	/*
     Card c;

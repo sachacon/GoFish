@@ -1,3 +1,5 @@
+#include <cstdlib>
+#include <ctime>
 #include "deck.h"
 #include "card.h"
 using namespace std;
@@ -13,16 +15,29 @@ Deck::Deck(){
 	    myCards[myIndex] = c;
 	    myIndex++;
         }
-   }
-   myIndex = 0;
+    }
+    myIndex = 0;
+    srand(time(0));
 }
 
 void Deck::shuffle(){
-
+    // replenishes the deck with 52 cards
+    int i = 0;
+    myIndex = 0;
+    long card1, card2;
+    for(i = 0; i < 200; i++){
+	card1 = rand() % SIZE;
+	card2 = rand() % SIZE;
+	Card temp = myCards[card1];
+	myCards[card1] = myCards[card2];
+        myCards[card2] = temp;	
+    }   
 }
 
 Card Deck::dealCard(){
-
+    Card card_dealt = myCards[myIndex];
+    myIndex++;
+    return card_dealt;
 }
 
 int Deck::size() const {
