@@ -9,9 +9,17 @@
 using namespace std;
 
 int main(){
+    int i = 0;
     Player p("Sergio");
     cout << "Player is called - " << p.getName() << endl;
-    int i = 0;
+    int s = 2;
+    Card::Suit suit1 = static_cast<Card::Suit>(s); 
+    Card card1(11,suit1);
+    Card card2(5,suit1);
+    p.addCard(card1);
+    p.addCard(card2);
+    cout << "Hand size = " << p.getHandSize() << endl << "Hand - " << p.showHand() << endl;
+
     Deck d;
     cout << d.size() << endl;
     for(i = 0; i < 10; i++){
