@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+// #include <algorithm>
 #include <iterator>
 #include "player.h" 
 #include "card.h"
@@ -41,8 +42,8 @@ bool Player::rankInHand(Card c) const {
 
 Card Player::chooseCardFromHand() const {
     Card c;
-    c = myHand.begin();
-    rotate(myHand.begin(), myHand.begin()+1, myHand.end());
+    c = myHand.front();
+    // rotate(myHand.begin(), myHand.begin()+1, myHand.end());
     return c;
 }
 
@@ -65,9 +66,10 @@ Card Player::removeCardFromHand(Card c) {
     int index = 0;
     vector<Card>::iterator iter;
     iter = myHand.begin();
-    while(iter != myHand.end() && !found_hand){
+    while(iter != myHand.end() && !found_card){
         c_hand = *iter;
         if(c == c_hand){
+
 	    myHand.erase(myHand.begin()+index);
 	    bool found_card =true;
  	}
@@ -91,8 +93,8 @@ string Player::showHand() const {
 string Player::showBooks() const {
     vector<Card>::const_iterator iter;
     string book;
-    Card = c;
-    for(iter = myBook.begin(); iter != myBook.end() iter++){
+    Card c;
+    for(iter = myBook.begin(); iter != myBook.end(); iter++){
 	c = *iter;
 	book += c.toString() + " ";
     }
@@ -108,11 +110,20 @@ int Player::getBookSize() const {
 }
 
 bool Player::checkHandForPair(Card &c1, Card &c2){
-
+    
 }
 
 bool Player::sameRankInHand(Card c) const {
-
+    bool same_rank = false;
+    Card hand;
+    vector<Card>::const_iterator iter;
+    for(iter = myHand.begin(); iter != myHand.end(); iter++){
+	hand = *iter;
+	if(hand.getRank() == c.getRank()){
+	    same_rank = true;
+	}	
+    }
+    return same_rank;
 }
 
 
