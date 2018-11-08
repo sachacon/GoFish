@@ -5,6 +5,7 @@
 using namespace std;
 
 Deck::Deck(){
+    // each deck has 52 cards, with 4 suits, 13 cards a suit
     myIndex = 0;
     int i = 0, j = 0, s = 0;
     for(j = 0; j < 4; j++){
@@ -16,6 +17,7 @@ Deck::Deck(){
 	    myIndex++;
         }
     }
+    // rest index to 0 i.e. full
     myIndex = 0;
     srand(time(0));
 }
@@ -35,6 +37,7 @@ void Deck::shuffle(){
 }
 
 Card Deck::dealCard(){
+    // deal a card update deck to have one less card in it
     if(myIndex == SIZE){
 	Card empty_deck;
 	return empty_deck;
