@@ -26,6 +26,7 @@ public:
     Player();
 
     Player(string name) {
+	myHand_Index = 0;
         myName = name;
     }
 
@@ -69,7 +70,7 @@ public:
     //this function will check a players hand for a pair.
     //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
-    bool checkHandForPair(Card &c1, Card &c2);
+    // bool checkHandForPair(Card &c1, Card &c2); - same as checkHandforBook
 
     //OPTIONAL
     // comment out if you decide to not use it
@@ -85,7 +86,7 @@ private:
     vector <Card> myBook;
 
     string myName;
-
+    int mutable myHand_Index;
 };
 
 

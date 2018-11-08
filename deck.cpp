@@ -21,13 +21,13 @@ Deck::Deck(){
 }
 
 void Deck::shuffle(){
-    // replenishes the deck with 52 cards
+    // shuffles deck
     int i = 0;
-    myIndex = 0;
+    int deck_size = size();
     long card1, card2;
     for(i = 0; i < 200; i++){
-	card1 = rand() % SIZE;
-	card2 = rand() % SIZE;
+	card1 = rand() % deck_size;
+	card2 = rand() % deck_size;
 	Card temp = myCards[card1];
 	myCards[card1] = myCards[card2];
         myCards[card2] = temp;	
@@ -35,6 +35,11 @@ void Deck::shuffle(){
 }
 
 Card Deck::dealCard(){
+    if(myIndex == SIZE){
+	Card empty_deck;
+	return empty_deck;
+	
+    }
     Card card_dealt = myCards[myIndex];
     myIndex++;
     return card_dealt;
