@@ -27,28 +27,34 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
     bool found_pair = false;
     vector<Card>::iterator iter;
     vector<Card>::iterator iter2;
+    Card pair1;
+    Card pair2;
     // check if any two different indexes have the same card in myHand vector
-    // double while loop with extra bool variable  
+    // double while loop with extra bool variable 
+    if(myHand.size() == 1){
+	return book_in_hand;
+	// do not go through while loop 
+    }
     iter = myHand.begin();
     iter2 = myHand.begin();
     while(iter != myHand.end() && !found_pair){
-	Card pair1 = *iter;
+	pair1 = *iter;
 	while(iter2 != myHand.end() && !found_pair){
 	    if( (iter - myHand.begin()) != (iter2 - myHand.begin()) ){
-		Card pair2 = *iter2;
-		if(pair1.getRank() == pair2.getRank()){
+	        pair2 = *iter2;
+	        if(pair1.getRank() == pair2.getRank()){
 		    c1 = *iter;
 		    c2 = *iter2;
 		    found_pair = true;
 		    book_in_hand = true;
-		}
-	    } 		
+	        }
+	    }
 	    iter2++;
 	}
 	iter++;
-	iter2 = myHand.begin();
+	iter2 = myHand.begin();	
     } 
-    return book_in_hand;
+    return book_in_hand;   
 }
 
 bool Player::rankInHand(Card c) const {
@@ -66,14 +72,20 @@ bool Player::rankInHand(Card c) const {
 
 Card Player::chooseCardFromHand() const {
     // rotate hand to return a different card each time, strategy
+    Card c;
     vector<Card>::const_iterator iter;
-    iter = myHand.begin();
-    for(int i = 0; i < myHand_Index;i++){
-        iter++;
+    if(myHand.size() == 1){
+	iter = myHand.begin();
+	c = *iter;	
     }
-    Card c = *iter;    
-    myHand_Index = (myHand_Index+1) % myHand.size(); 
-  
+    else if(myHand.size() > 1){
+        iter = myHand.begin();
+	for(int i = 0; i < myHand_Index; i++){
+	     iter++;	
+	}
+	c = *iter;
+        myHand_Index = (myHand_Index+1) % myHand.size();    
+    }
     return c;
 }
 
@@ -94,31 +106,16 @@ bool Player::cardInHand(Card c) const {
 Card Player::removeCardFromHand(Card c) {
     // remove card from hand with .erase make new card with exact qualities
     Card c_hand;
+    bool found = false;
     int index = 0;
     vector<Card>::iterator iter;
     iter = myHand.begin();
-    while(iter != myHand.end()){
+    while(iter != myHand.end() && !found){
         c_hand = *iter;
         if(c.getRank() ==  c_hand.getRank()){
-	    int new_rank = c_hand.getRank();
-	    int s = 0;
-	    string old_suit = c_hand.toString();
-	    old_suit.erase(0,1);
-	    if(old_suit == "s"){
-		s = 0;
-	    }
-	    else if(old_suit == "h"){
-		s = 1;
-	    } 
- 	    else if(old_suit == "d"){
-		s = 2;
-	    }else{
-		s = 3;
- 	    }
-	    Card::Suit new_suit = static_cast<Card::Suit>(s);
-	    Card remove(new_rank, new_suit);
+	    c = c_hand;
 	    myHand.erase(myHand.begin()+index);
-	    return remove;
+	    found = true;
  	}
 	iter++;
 	index++;
@@ -161,7 +158,11 @@ int Player::getHandSize() const {
 
 int Player::getBookSize() const {
     // each book is two cards , so num of cards divided by two
-    return (myBook.size() / 2);
+    int size = myBook.size();
+    if(size % 2 != 0){
+	cout << "book is somehow odd" << endl;
+    }
+    return (size/2);
 }
 
 	/*
