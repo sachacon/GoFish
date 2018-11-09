@@ -7,239 +7,215 @@ Starting game ...
 
 Players ready , deck shuffled, cards dealt, Joe goes first ... 
 
-Joe books a 8
-Joe asks - Do you have a K
-Jane says - Yes. I have a K
-Joe books a K
+Joe books a Q
+Joe asks - Do you have a 7
+Jane says - Yes. I have a 7
+Joe books a 7
 
 Jane asks - Do you have a 9
 Joe says - Yes. I have a 9
 Jane books a 9
 
-Joe asks - Do you have a A
-Jane says - Go Fish 
-Joe draws Qh
-
-Jane asks - Do you have a 4
-Joe says - Go Fish 
-Jane draws Ac
-
-Joe asks - Do you have a 2
-Jane says - Go Fish 
-Joe draws 2s
-
-Jane asks - Do you have a J
-Joe says - Go Fish 
-Jane draws Js
-
-Joe books a 2
-Joe asks - Do you have a 2
-Jane says - Go Fish 
-Joe draws 10c
-
-Jane books a J
-Jane asks - Do you have a K
-Joe says - Go Fish 
-Jane draws 8d
-
-Joe asks - Do you have a A
-Jane says - Yes. I have a A
-Joe books a A
-
-Jane asks - Do you have a 8
-Joe says - Go Fish 
-Jane draws 7c
-
-Joe asks - Do you have a 10
-Jane says - Go Fish 
-Joe draws 4h
-
-Jane books a 7
-Jane asks - Do you have a 5
-Joe says - Go Fish 
-Jane draws Jh
-
-Joe asks - Do you have a 6
-Jane says - Go Fish 
-Joe draws 5s
-
-Jane asks - Do you have a 4
-Joe says - Yes. I have a 4
-Jane books a 4
-
-Joe asks - Do you have a Q
-Jane says - Go Fish 
-Joe draws 10d
-
-Jane asks - Do you have a 8
-Joe says - Go Fish 
-Jane draws Qs
-
-Joe books a 10
-Joe asks - Do you have a 5
-Jane says - Yes. I have a 5
-Joe books a 5
-
-Jane asks - Do you have a Q
-Joe says - Yes. I have a Q
-Jane books a Q
-
-Joe asks - Do you have a 6
-Jane says - Go Fish 
-Joe draws Kc
-
-Jane asks - Do you have a K
-Joe says - Yes. I have a K
-Jane books a K
-
-Joe asks - Do you have a 6
-Jane says - Go Fish 
-Joe draws 10s
-
-Jane asks - Do you have a J
-Joe says - Go Fish 
-Jane draws 7d
-
-Joe asks - Do you have a 6
+Joe asks - Do you have a 8
 Jane says - Go Fish 
 Joe draws 5d
 
-Jane asks - Do you have a 8
+Jane asks - Do you have a Q
 Joe says - Go Fish 
-Jane draws 3c
+Jane draws 4c
 
-Joe asks - Do you have a 10
-Jane says - Go Fish 
-Joe draws 3s
-
-Jane asks - Do you have a J
-Joe says - Go Fish 
-Jane draws 7s
-
+Joe books a 5
 Joe asks - Do you have a 5
 Jane says - Go Fish 
-Joe draws 3h
-
-Jane books a 7
-Jane asks - Do you have a 3
-Joe says - Yes. I have a 3
-Jane books a 3
-
-Joe asks - Do you have a 3
-Jane says - Go Fish 
-Joe draws Qd
-
-Jane asks - Do you have a 8
-Joe says - Go Fish 
-Jane draws 9s
-
-Joe asks - Do you have a 6
-Jane says - Go Fish 
-Joe draws 6h
-
-Jane asks - Do you have a J
-Joe says - Go Fish 
-Jane draws As
-
-Joe books a 6
-Joe asks - Do you have a 5
-Jane says - Go Fish 
-Joe draws Jc
-
-Jane asks - Do you have a 9
-Joe says - Go Fish 
-Jane draws 9c
-
-Joe asks - Do you have a 3
-Jane says - Go Fish 
-Joe draws 3d
-
-Jane books a 9
-Jane asks - Do you have a 9
-Joe says - Go Fish 
-Jane draws 5c
-
-Joe books a 3
-Joe asks - Do you have a J
-Jane says - Yes. I have a J
-Joe books a J
+Joe draws 2h
 
 Jane asks - Do you have a A
 Joe says - Go Fish 
-Jane draws 6s
-
-Joe asks - Do you have a 10
-Jane says - Go Fish 
-Joe draws Qc
-
-Jane asks - Do you have a 5
-Joe says - Yes. I have a 5
-Jane books a 5
-
-Joe books a Q
-Joe asks - Do you have a 10
-Jane says - Go Fish 
-Joe draws 4d
-
-Jane asks - Do you have a 5
-Joe says - Go Fish 
-Jane draws 6c
-
-Joe asks - Do you have a 4
-Jane says - Go Fish 
-Joe draws 2d
-
-Jane books a 6
-Jane asks - Do you have a A
-Joe says - Go Fish 
-Jane draws Ad
-
-Joe asks - Do you have a 10
-Jane says - Go Fish 
-Joe draws 10h
-
-Jane books a A
-Jane asks - Do you have a 8
-Joe says - Go Fish 
-Jane draws 2h
-
-Joe books a 10
-Joe asks - Do you have a 2
-Jane says - Yes. I have a 2
-Joe books a 2
-
-Jane asks - Do you have a 8
-Joe says - Go Fish 
-Jane draws 4s
+Jane draws 2s
 
 Joe asks - Do you have a 4
 Jane says - Yes. I have a 4
 Joe books a 4
 
-Jane asks - Do you have a 8
+Jane books a 2
+Jane asks - Do you have a K
+Joe says - Go Fish 
+Jane draws Jd
+
+Joe asks - Do you have a 4
+Jane says - Go Fish 
+Joe draws 2c
+
+Jane asks - Do you have a 3
+Joe says - Go Fish 
+Jane draws Ks
+
+Joe books a 2
+Joe asks - Do you have a 8
+Jane says - Go Fish 
+Joe draws 10s
+
+Jane books a K
+Jane asks - Do you have a Q
+Joe says - Go Fish 
+Jane draws 10h
+
+Joe asks - Do you have a 10
+Jane says - Yes. I have a 10
+Joe books a 10
+
+Jane asks - Do you have a A
+Joe says - Go Fish 
+Jane draws 3h
+
+Joe asks - Do you have a 8
+Jane says - Go Fish 
+Joe draws 6h
+
+Jane books a 3
+Jane asks - Do you have a 3
+Joe says - Go Fish 
+Jane draws 9c
+
+Joe asks - Do you have a 8
+Jane says - Go Fish 
+Joe draws Jh
+
+Jane asks - Do you have a A
+Joe says - Go Fish 
+Jane draws As
+
+Joe asks - Do you have a 6
+Jane says - Go Fish 
+Joe draws 8d
+
+Jane books a A
+Jane asks - Do you have a 9
+Joe says - Go Fish 
+Jane draws Ac
+
+Joe books a 8
+Joe asks - Do you have a 8
+Jane says - Go Fish 
+Joe draws 4s
+
+Jane asks - Do you have a Q
+Joe says - Go Fish 
+Jane draws Kd
+
+Joe asks - Do you have a J
+Jane says - Yes. I have a J
+Joe books a J
+
+Jane asks - Do you have a 9
+Joe says - Go Fish 
+Jane draws 6c
+
+Joe asks - Do you have a J
+Jane says - Go Fish 
+Joe draws 10d
+
+Jane asks - Do you have a A
+Joe says - Go Fish 
+Jane draws 6s
+
+Joe asks - Do you have a 4
+Jane says - Go Fish 
+Joe draws Kc
+
+Jane books a 6
+Jane asks - Do you have a K
+Joe says - Yes. I have a K
+Jane books a K
+
+Joe asks - Do you have a 10
+Jane says - Go Fish 
+Joe draws Js
+
+Jane asks - Do you have a Q
+Joe says - Go Fish 
+Jane draws 7d
+
+Joe asks - Do you have a 6
+Jane says - Go Fish 
+Joe draws 8h
+
+Jane asks - Do you have a 9
+Joe says - Go Fish 
+Jane draws 9s
+
+Joe asks - Do you have a 4
+Jane says - Go Fish 
+Joe draws 10c
+
+Jane books a 9
+Jane asks - Do you have a 7
+Joe says - Go Fish 
+Jane draws Jc
+
+Joe books a 10
+Joe asks - Do you have a J
+Jane says - Yes. I have a J
+Joe books a J
+
+Jane asks - Do you have a Q
+Joe says - Go Fish 
+Jane draws 7c
+
+Joe asks - Do you have a J
+Jane says - Go Fish 
+Joe draws 6d
+
+Jane books a 7
+Jane asks - Do you have a A
+Joe says - Go Fish 
+Jane draws 4d
+
+Joe books a 6
+Joe asks - Do you have a 8
+Jane says - Go Fish 
+Joe draws 3s
+
+Jane asks - Do you have a Q
+Joe says - Go Fish 
+Jane draws 5c
+
+Joe asks - Do you have a 4
+Jane says - Yes. I have a 4
+Joe books a 4
+
+Jane asks - Do you have a A
 Joe says - Go Fish 
 Jane draws 8s
 
-Joe asks - Do you have a 7
+Joe asks - Do you have a 3
 Jane says - Go Fish 
+Joe draws 3d
 
-Jane books a 8
-Jane asks - Do you have a Q
+Jane asks - Do you have a 5
 Joe says - Go Fish 
+Jane draws 5h
+
+Joe books a 3
+Joe asks - Do you have a 8
+Jane says - Yes. I have a 8
+Joe books a 8
 
 --------------------------------------------
 
-Tie Game ... No Winner
+Joe wins with 14 books
+
+Deck size = 2
 
 Joe's hand: size - 0
 EMPTY
-Joe's book: size - 13
-8c 8h Ks Kh 2c 2s Ah Ac 10c 10d 5s 5h 6d 6h 3h 3d Jc Jh Qd Qc 10s 10h 2d 2h 4d 4s 
+Joe's book: size - 14
+Qd Qc 7s 7h 5s 5d 4h 4c 2h 2c 10s 10h 8c 8d Jh Jd 10d 10c Js Jc 6h 6d 4s 4d 3s 3d 8h 8s 
 
-Jane's hand: size - 0
-EMPTY
-Jane's book: size - 13
-9d 9h Jd Js 7h 7c 4c 4h Qs Qh Kd Kc 7d 7s 3c 3s 9s 9c 5c 5d 6s 6c As Ad 8d 8s 
+Jane's hand: size - 4
+Qs Ac 5c 5h 
+Jane's book: size - 9
+9h 9d 2d 2s Kh Ks 3c 3h Ad As 6c 6s Kd Kc 9c 9s 7d 7c 
 
 GAME OVER
 

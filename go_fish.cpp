@@ -43,7 +43,7 @@ bool check_winner(Player &p1, Player &p2){
 // print_end_state() - prints who won, player's hands, sizes, and books
 // pre-conditions: A player has won or a tie, given two player instances by references, valid players
 // post-conditions: prints out to console game state
-void print_end_state(Player &p1, Player &p2, ofstream &myfile){
+void print_end_state(Player &p1, Player &p2, Deck d, ofstream &myfile){
     // Print the winner's name and book size
     // Already checked that one of the two won (i.e. one has a book size >13)
     myfile << endl << "--------------------------------------------" << endl;
@@ -55,7 +55,10 @@ void print_end_state(Player &p1, Player &p2, ofstream &myfile){
     }else{
 	myfile << endl << p2.getName() << " wins with " << p2.getBookSize() << " books" << endl; 
     }
-  
+ 
+    // Show deck 
+    myfile << "\nDeck size = " << d.size() << "\n"; 
+ 
     // Show player 1's book and hand 
     myfile << endl << p1.getName() << "'s hand: " << "size - " << p1.getHandSize()
 	 << endl << p1.showHand() << endl;
@@ -115,11 +118,12 @@ int main(){
     Card book1;
     Card book2;
     Card went_fishing;
-    bool pair_found = true; 
+    bool pair_found = true, card_drawn = false; 
     while(!winner){
 	myfile << "\n";
  	// execute turn 
  	pair_found = true; 
+	card_drawn = false;
 	if(player == 1){
 	   
 	    // book any cards if needed
@@ -143,28 +147,32 @@ int main(){
 		card_to_ask = d.dealCard();
 		p1.addCard(card_to_ask);
 		myfile << p1.getName() << " draws a " << card_to_ask.toString() << endl;
+		card_drawn = true;
 	    }else{
 	        card_to_ask = p1.chooseCardFromHand();
 	    }
-	    myfile << p1.getName() << " asks - Do you have a " << card_to_ask.rankString(card_to_ask.getRank()) << endl;
- 	    // if other player has the card, get it and book it if able to
-	    if(p2.rankInHand(card_to_ask)){
-		myfile << p2.getName() << " says - Yes. I have a " 
-		     << card_to_ask.rankString(card_to_ask.getRank()) << endl;
-	        removed = p2.removeCardFromHand(card_to_ask);
-	        p1.addCard(removed);
+	    if(!card_drawn){
+	        myfile << p1.getName() << " asks - Do you have a "
+		       << card_to_ask.rankString(card_to_ask.getRank()) << endl;
+ 	        // if other player has the card, get it and book it if able to
+	        if(p2.rankInHand(card_to_ask)){
+	 	    myfile << p2.getName() << " says - Yes. I have a " 
+		           << card_to_ask.rankString(card_to_ask.getRank()) << endl;
+	            removed = p2.removeCardFromHand(card_to_ask);
+	            p1.addCard(removed);
 		
-		if(p1.checkHandForBook(book1, book2)){
-		    book_cards(p1, book1, book2, myfile);
-		}
-	    // if other player does not have the card, go fishing, draw card
-	    }else{
-		myfile << p2.getName() << " says - Go Fish " << endl;
-		if(d.size() != 0){
-		    went_fishing = d.dealCard();
-		    p1.addCard(went_fishing);
-		    myfile << p1.getName() << " draws " << went_fishing.toString() << endl;
-		}
+		    if(p1.checkHandForBook(book1, book2)){
+		        book_cards(p1, book1, book2, myfile);
+		    }
+	        // if other player does not have the card, go fishing, draw card
+	        }else{
+		    myfile << p2.getName() << " says - Go Fish " << endl;
+		    if(d.size() != 0){
+		        went_fishing = d.dealCard();
+		        p1.addCard(went_fishing);
+		        myfile << p1.getName() << " draws " << went_fishing.toString() << endl;
+		    }
+	        }
 	    }
 
         }else{
@@ -190,30 +198,33 @@ int main(){
 		card_to_ask = d.dealCard();
 		p2.addCard(card_to_ask);
 		myfile << p2.getName() << " draws a " << card_to_ask.toString() << endl;
+		card_drawn = true;
  	    }
 	    else{
  	        card_to_ask = p2.chooseCardFromHand();
 	    }
-	    myfile << p2.getName() << " asks - Do you have a " << card_to_ask.rankString(card_to_ask.getRank()) << endl;
-	    // if other player has the card, get it and book it if able to
-	    if(p1.rankInHand(card_to_ask)){
-		myfile << p1.getName() << " says - Yes. I have a " 
-		     << card_to_ask.rankString(card_to_ask.getRank()) << endl;
-		removed = p1.removeCardFromHand(card_to_ask);
-		p2.addCard(removed);
-		if(p2.checkHandForBook(book1, book2)){
-		    book_cards(p2, book1, book2, myfile);
-		}
-	    // if other player doesn't have the card, go fishing, draw a card
-	    }else{
-		myfile << p1.getName() << " says - Go Fish " << endl;
-		if(d.size() != 0){
-		    went_fishing = d.dealCard();
-		    p2.addCard(went_fishing);
-		    myfile << p2.getName() << " draws " << went_fishing.toString() << endl;
-		}
+	    if(!card_drawn){
+	        myfile << p2.getName() << " asks - Do you have a " 
+		       << card_to_ask.rankString(card_to_ask.getRank()) << endl;
+	        // if other player has the card, get it and book it if able to
+	        if(p1.rankInHand(card_to_ask)){
+		    myfile << p1.getName() << " says - Yes. I have a " 
+		           << card_to_ask.rankString(card_to_ask.getRank()) << endl;
+		    removed = p1.removeCardFromHand(card_to_ask);
+		    p2.addCard(removed);
+		    if(p2.checkHandForBook(book1, book2)){
+		        book_cards(p2, book1, book2, myfile);
+		    }
+	        // if other player doesn't have the card, go fishing, draw a card
+	        }else{
+		    myfile << p1.getName() << " says - Go Fish " << endl;
+		    if(d.size() != 0){
+		        went_fishing = d.dealCard();
+		        p2.addCard(went_fishing);
+		        myfile << p2.getName() << " draws " << went_fishing.toString() << endl;
+		    }
+	        }
 	    }
-
 	}
 
  	// change which player's turn it is
@@ -235,7 +246,7 @@ int main(){
     }
    
     // Find and print who won, show each player's hands and books
-    print_end_state(p1, p2, myfile);
+    print_end_state(p1, p2, d, myfile);
     myfile << endl << "GAME OVER\n\n";
     myfile.close();		
     return(0);
